@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 public class Cart extends ArrayList<Product> {
     private Product productForRemove;
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
     public Cart() {
 
     }
@@ -20,7 +20,7 @@ public class Cart extends ArrayList<Product> {
 
         }
         return "ProductRepository{\n" +
-                sb.toString() +
+                sb +
                 '}';
     }
 
@@ -33,7 +33,6 @@ public class Cart extends ArrayList<Product> {
         stream.forEach(n -> {
             if (n.getId() == idForRemove) {
                 productForRemove = n;
-                System.out.println(productForRemove.toString());
             }
         });
         this.remove(productForRemove);

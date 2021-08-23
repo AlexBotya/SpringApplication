@@ -1,12 +1,10 @@
 package ru.geekbrains.spring.application.core;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Stream;
+
 
 public class ProductRepository extends ArrayList<Product>{
-    private Product productForRemove;
+
 
     public ProductRepository() {
 
@@ -25,7 +23,7 @@ public class ProductRepository extends ArrayList<Product>{
 
         }
         return "ProductRepository{\n" +
-                sb.toString() +
+                sb +
                 '}';
     }
 }
