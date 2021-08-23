@@ -17,7 +17,6 @@ public class ProductRepository extends ArrayList<Product>{
         add(new Product(5, "Grape", 35));
     }
 
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -28,33 +27,5 @@ public class ProductRepository extends ArrayList<Product>{
         return "ProductRepository{\n" +
                 sb.toString() +
                 '}';
-    }
-    public void removeProduct(int idForRemove){
-
-        Stream<Product> stream = this.stream();
-
-        stream.forEach(n->{
-            if (n.getId() == idForRemove){
-                productForRemove = n;
-                System.out.println(productForRemove.toString());
-            }
-        });
-        this.remove(productForRemove);
-    }
-
-    public void addProduct(){
-
-        Scanner scanner = new Scanner(System.in);
-        int id;
-        String name;
-        int cost;
-        System.out.println("Input ID..");
-        id = scanner.nextInt();
-        System.out.println("Input name..");
-        name = scanner.next();
-        System.out.println("Input cost..");
-        cost = scanner.nextInt();
-        this.add(new Product(id, name, cost));
-
     }
 }
