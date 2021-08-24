@@ -1,11 +1,15 @@
 package ru.geekbrains.spring.application.core;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.stream.Stream;
 
 
 public class ProductRepository extends ArrayList<Product>{
 
-
+    @Autowired
     public ProductRepository() {
 
         add(new Product(1, "Potato", 10));
@@ -25,5 +29,17 @@ public class ProductRepository extends ArrayList<Product>{
         return "ProductRepository{\n" +
                 sb +
                 '}';
+    }
+    public void showProductById(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input product ID to show.. ");
+        int idForReturn = scanner.nextInt();
+        Stream<Product> stream = this.stream();
+
+        stream.forEach(n -> {
+            if (n.getId() == idForReturn) {
+                System.out.println(n);
+            }
+        });
     }
 }

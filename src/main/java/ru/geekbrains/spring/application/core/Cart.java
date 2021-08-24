@@ -1,15 +1,16 @@
 package ru.geekbrains.spring.application.core;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
+
 public class Cart extends ArrayList<Product> {
     private Product productForRemove;
     private final Scanner scanner = new Scanner(System.in);
-    public Cart() {
-
-    }
+    @Autowired
 
 
     @Override
@@ -19,7 +20,7 @@ public class Cart extends ArrayList<Product> {
             sb.append(product.toString());
 
         }
-        return "ProductRepository{\n" +
+        return "Cart{\n" +
                 sb +
                 '}';
     }
