@@ -1,4 +1,4 @@
-package ru.geekbrains.spring.application.root;
+package ru.geekbrains.spring.application.mcvRoot;
 
 import org.springframework.web.context.AbstractContextLoaderInitializer;
 import org.springframework.web.context.WebApplicationContext;

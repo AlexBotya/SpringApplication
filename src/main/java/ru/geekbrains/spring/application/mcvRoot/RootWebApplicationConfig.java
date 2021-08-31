@@ -1,8 +1,7 @@
-package ru.geekbrains.spring.application.root;
+package ru.geekbrains.spring.application.mcvRoot;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import ru.geekbrains.spring.application.core.ConsoleAppConfiguration;
 
 @Configuration

@@ -1,4 +1,4 @@
-package ru.geekbrains.spring.application.root;
+package ru.geekbrains.spring.application.mcvRoot;
 
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.WebApplicationInitializer;

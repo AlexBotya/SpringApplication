@@ -1,4 +1,4 @@
-package ru.geekbrains.spring.application.root.controller;
+package ru.geekbrains.spring.application.mcvRoot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
