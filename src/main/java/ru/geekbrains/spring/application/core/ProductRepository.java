@@ -3,6 +3,8 @@ package ru.geekbrains.spring.application.core;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -30,16 +32,10 @@ public class ProductRepository extends ArrayList<Product>{
                 sb +
                 '}';
     }
-    public void showProductById(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Input product ID to show.. ");
-        int idForReturn = scanner.nextInt();
-        Stream<Product> stream = this.stream();
-
-        stream.forEach(n -> {
-            if (n.getId() == idForReturn) {
-                System.out.println(n);
-            }
-        });
+    public Optional<Product> findById(int id){
+        return this.stream().filter(p -> p.getId() == id).findFirst();
+    }
+    public List<Product> findAll(){
+        return this;
     }
 }
