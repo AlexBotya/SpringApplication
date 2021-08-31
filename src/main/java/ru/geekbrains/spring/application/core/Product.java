@@ -3,9 +3,9 @@ package ru.geekbrains.spring.application.core;
 public class Product {
     private int id;
     private String name;
-    private int cost;
+    private double cost;
 
-    public Product(int id, String name, int cost) {
+    public Product(int id, String name, double cost) {
         this.id = id;
         this.name = name;
         this.cost = cost;
@@ -22,5 +22,9 @@ public class Product {
 
     public int getId() {
         return id;
+    }
+
+    public double getCost() {
+        return cost;
     }
 }
