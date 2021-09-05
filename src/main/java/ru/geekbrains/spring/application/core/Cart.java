@@ -1,17 +1,20 @@
 package ru.geekbrains.spring.application.core;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
-
+@Scope("prototype")
 public class Cart extends ArrayList<Product> {
     private ProductRepository productRepository;
 
     @Autowired
-    Cart(ProductRepository productRepository){
+
+
+     Cart(ProductRepository productRepository){
         this.productRepository = productRepository;
     }
 
