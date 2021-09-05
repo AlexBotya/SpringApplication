@@ -2,6 +2,7 @@ package ru.geekbrains.spring.application.core;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import ru.geekbrains.spring.application.core.orderRepository.OrderRepository;
 
 @Configuration
 public class ConsoleAppConfiguration {
@@ -18,6 +19,10 @@ public class ConsoleAppConfiguration {
 
     public AppProcessor AppProcessor(Cart cart, ProductRepository productRepository){
         return new AppProcessor(cart, productRepository);
+    }
+    @Bean
+    public OrderRepository orderRepository(){
+        return new OrderRepository();
     }
 
 }
